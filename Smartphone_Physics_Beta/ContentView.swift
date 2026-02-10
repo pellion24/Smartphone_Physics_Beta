@@ -7,15 +7,55 @@
 
 import SwiftUI
 
+func logIn() {
+    
+}
+
+func signUp() {
+    
+}
+
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text("Smartphone Physics")
+            Text("Welcome")
+            HStack {
+                Button(action: logIn) {
+                    Text("Login")
+                }
+                Button(action : signUp) {
+                    Text("Signup")
+                }
+            }
         }
         .padding()
+        TabView {
+            AllLessonsView()
+                .tabItem {
+                    Image(systemName: "graduationcap")
+                    Text("Lessons")
+                }
+            Text("Materials")
+                .tabItem {
+                    Image(systemName: "tray.fill" )
+                    Text("Materials")
+                }
+            ProfileView()
+                .tabItem {
+                    Image(systemName: "person.crop.circle")
+                    Text("Profile")
+                }
+            CommunityView()
+                .tabItem {
+                    Image(systemName: "person.3.fill")
+                    Text("Community")
+                    
+                }
+        }
+        
+        
+        
     }
 }
 
