@@ -8,7 +8,9 @@
 import SwiftUI
 
 func logIn() {
-    
+    NavigationLink(destination: LogInView()) {
+        
+    }
 }
 
 func signUp() {

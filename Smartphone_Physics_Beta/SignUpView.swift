@@ -13,16 +13,17 @@ struct SignUpView: View {
     @State private var password: String = ""
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Image(systemName: "person.crop.circle.fill")
+    
         TextField (
             "User name (email address)",
             text: $username
         )
+        
         TextField (
             "Password",
             text: $password
         )
-        
     }
 }
 
